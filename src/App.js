@@ -1,10 +1,8 @@
 import "./App.css";
 import React, { useState } from "react";
 import List from "./List";
-import TextField from "@mui/material/TextField";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
-import { Button } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
+
+import Input from "./Input";
 
 function App() {
   const [item, setItem] = useState("");
@@ -49,31 +47,8 @@ function App() {
             <h1>TO DO LIST</h1>
             <br />
           </div>
-          <div className="inputdiv">
-            <form>
-              <TextField
-                className="inputfield"
-                id="standard-basic"
-                label="Add item"
-                value={item}
-                onChange={HandleChange}
-                variant="standard"
-                color="success"
-                // inputProps={{style: {fontWeight:500}}}
-              />
-              {/* <input
-                type="text"
-                placeholder="Add item"
-                name="item"
-                value={item}
-                onChange={HandleChange}
-              ></input> */}
-              {/* <AddCircleIcon fontSize="large" type="submit" onClick={AddItem} className="Addicon"/> */}
-              <IconButton type="submit" onClick={AddItem}>
-                <AddCircleIcon fontSize="large" className="Addicon" />
-              </IconButton>
-            </form>
-          </div>
+          <Input item={item} HandleChange={HandleChange} AddItem={AddItem} />
+          
           <div className="listdiv">
             <ul>
               {listItem.map((val, index) => {
