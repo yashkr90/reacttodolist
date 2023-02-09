@@ -1,0 +1,16 @@
+.itemdiv{
+  background: transparent;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  font-size: 20px;
+  justify-content:left
+
+}
+.delicon{
+  color: black;
+}
+.delicon:hover{
+  
+  color: red;
+}
